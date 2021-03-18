@@ -38,6 +38,8 @@
     <link rel="stylesheet" href="{{asset('css/custom.css')}}">
     <link rel="stylesheet" href="{{asset('css/'.setting("theme_color","primary").'.css')}}">
     @yield('css_custom')
+    <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+
 </head>
 
 <body style="height: 100%; background-color: #f9f9f9;" class="hold-transition sidebar-mini {{setting('theme_color')}}">
