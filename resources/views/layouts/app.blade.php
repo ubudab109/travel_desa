@@ -269,7 +269,7 @@
     <script src="{{asset('js/scripts.js')}}"></script>
     @stack('scripts')
     <script type="text/javascript">
-        var firebaseConfig = {
+         var firebaseConfig = {
         apiKey: "{{setting('firebase_api_key','')}}",
         authDomain: "{{setting('firebase_auth_domain','')}}",
         databaseURL: "{{setting('firebase_database_url','')}}",
@@ -283,5 +283,6 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
     </script>
+    @include('datatables_js.blade.php')
 </body>
 </html>
