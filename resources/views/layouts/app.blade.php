@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="{{asset('css/custom.css')}}">
     <link rel="stylesheet" href="{{asset('css/'.setting("theme_color","primary").'.css')}}">
     @yield('css_custom')
-    <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('plugins/jquery/jquery.min.js')}}" type="text/javascript"></script>
 
 </head>
 
