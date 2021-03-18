@@ -5,34 +5,34 @@
     <title>{{setting('app_name')}} | {{setting('app_short_description')}}</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link rel="icon" type="image/png" href="{{$app_logo}}"/>
-    <!-- Tell the browser to be responsive to screen width -->
+    {{-- <!-- Tell the browser to be responsive to screen width --> --}}
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Font Awesome -->
+    {{-- <!-- Font Awesome --> --}}
     <link rel="stylesheet" href="{{asset('plugins/font-awesome/css/font-awesome.min.css')}}">
 
-    <!-- Ionicons -->
-{{--<link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">--}}
-{{--<!-- iCheck -->--}}
-{{--<link rel="stylesheet" href="{{asset('plugins/iCheck/flat/blue.css')}}">--}}
-{{--<!-- select2 -->--}}
-{{--<link rel="stylesheet" href="{{asset('plugins/select2/select2.min.css')}}">--}}
-<!-- Morris chart -->
-{{--<link rel="stylesheet" href="{{asset('plugins/morris/morris.css')}}">--}}
-<!-- jvectormap -->
-{{--<link rel="stylesheet" href="{{asset('plugins/jvectormap/jquery-jvectormap-1.2.2.css')}}">--}}
-<!-- Date Picker -->
-{{--<link rel="stylesheet" href="{{asset('plugins/datepicker/datepicker3.css')}}">--}}
-<!-- Daterange picker -->
-{{--<link rel="stylesheet" href="{{asset('plugins/daterangepicker/daterangepicker-bs3.css')}}">--}}
-{{--<!-- bootstrap wysihtml5 - text editor -->--}}
-{{--<link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.css')}}">--}}
+    {{-- <!-- Ionicons --> --}}
+<link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
+{{-- <!-- iCheck --> --}}
+<link rel="stylesheet" href="{{asset('plugins/iCheck/flat/blue.css')}}">
+{{-- <!-- select2 --> --}}
+<link rel="stylesheet" href="{{asset('plugins/select2/select2.min.css')}}">
+{{-- <!-- Morris chart --> --}}
+<link rel="stylesheet" href="{{asset('plugins/morris/morris.css')}}">
+{{-- <!-- jvectormap --> --}}
+<link rel="stylesheet" href="{{asset('plugins/jvectormap/jquery-jvectormap-1.2.2.css')}}">
+{{-- <!-- Date Picker --> --}}
+<link rel="stylesheet" href="{{asset('plugins/datepicker/datepicker3.css')}}">
+{{-- <!-- Daterange picker --> --}}
+<link rel="stylesheet" href="{{asset('plugins/daterangepicker/daterangepicker-bs3.css')}}">
+{{-- <!-- bootstrap wysihtml5 - text editor --> --}}
+<link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.css')}}">
 
 @stack('css_lib')
-<!-- Theme style -->
+{{-- <!-- Theme style --> --}}
     <link rel="stylesheet" href="{{asset('dist/css/adminlte.css')}}">
     <link rel="stylesheet" href="{{asset('plugins/bootstrap-sweetalert/sweetalert.css')}}">
-    {{--<!-- Bootstrap -->--}}
-    {{--<link rel="stylesheet" href="{{asset('plugins/bootstrap/css/bootstrap.min.css')}}">--}}
+    {{-- <!-- Bootstrap --> --}}
+    <link rel="stylesheet" href="{{asset('plugins/bootstrap/css/bootstrap.min.css')}}">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/custom.css')}}">
@@ -43,10 +43,10 @@
 <body style="height: 100%; background-color: #f9f9f9;" class="hold-transition sidebar-mini {{setting('theme_color')}}">
 @if(auth()->check())
     <div class="wrapper">
-        <!-- Main Header -->
-        <!-- Navbar -->
+        {{-- <!-- Main Header --> --}}
+        {{-- <!-- Navbar --> --}}
         <nav class="main-header navbar navbar-expand {{setting('fixed_header','')}} {{setting('nav_color','navbar-light bg-white')}} border-bottom">
-            <!-- Left navbar links -->
+            {{-- <!-- Left navbar links --> --}}
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
@@ -56,7 +56,7 @@
                 </li>
             </ul>
 
-            <!-- Right navbar links -->
+            {{-- <!-- Right navbar links --> --}}
             <ul class="navbar-nav ml-auto">
                 @if(env('APP_CONSTRUCTION',false))
                     <li class="nav-item">
@@ -94,14 +94,14 @@
             </ul>
         </nav>
 
-        <!-- Left side column. contains the logo and sidebar -->
+        {{-- <!-- Left side column. contains the logo and sidebar --> --}}
     @include('layouts.sidebar')
-    <!-- Content Wrapper. Contains page content -->
+    {{-- <!-- Content Wrapper. Contains page content --> --}}
         <div class="content-wrapper">
             @yield('content')
         </div>
 
-        <!-- Main Footer -->
+        {{-- <!-- Main Footer --> --}}
         <footer class="main-footer {{setting('fixed_footer','')}}">
             <div class="float-right d-none d-sm-block">
                 <b>Version</b> {{setting('app_version')}}
@@ -165,11 +165,11 @@
     <!-- jQuery -->
     <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
     <!-- jQuery UI 1.11.4 -->
-    {{--<script src="{{asset('https://code.jquery.com/ui/1.12.1/jquery-ui.min.js')}}"></script>--}}
+    <script src="{{asset('https://code.jquery.com/ui/1.12.1/jquery-ui.min.js')}}"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-    {{--<script>--}}
-    {{--$.widget.bridge('uibutton', $.ui.button)--}}
-    {{--</script>--}}
+    <script>
+    $.widget.bridge('uibutton', $.ui.button)
+    </script>
     <!-- Bootstrap 4 -->
     <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
@@ -236,32 +236,32 @@
         }
     </script>
 
-    <!-- Sparkline -->
-    {{--<script src="{{asset('plugins/sparkline/jquery.sparkline.min.js')}}"></script>--}}
-    {{--<!-- iCheck -->--}}
-    {{--<script src="{{asset('plugins/iCheck/icheck.min.js')}}"></script>--}}
-    {{--<!-- select2 -->--}}
-    {{--<script src="{{asset('plugins/select2/select2.min.js')}}"></script>--}}
-    <!-- jQuery Knob Chart -->
-    {{--<script src="{{asset('plugins/knob/jquery.knob.js')}}"></script>--}}
-    <!-- daterangepicker -->
-    {{--<script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js')}}"></script>--}}
-    {{--<script src="{{asset('plugins/daterangepicker/daterangepicker.js')}}"></script>--}}
-    <!-- datepicker -->
-    {{--<script src="{{asset('plugins/datepicker/bootstrap-datepicker.js')}}"></script>--}}
-    <!-- Bootstrap WYSIHTML5 -->
-    {{--<script src="{{asset('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}"></script>--}}
-    <!-- Slimscroll -->
+    // <!-- Sparkline -->
+    <script src="{{asset('plugins/sparkline/jquery.sparkline.min.js')}}"></script>
+    // <!-- iCheck -->
+    <script src="{{asset('plugins/iCheck/icheck.min.js')}}"></script>
+    // <!-- select2 -->
+    <script src="{{asset('plugins/select2/select2.min.js')}}"></script>
+    // <!-- jQuery Knob Chart -->
+    <script src="{{asset('plugins/knob/jquery.knob.js')}}"></script>
+    // <!-- daterangepicker -->
+    <script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js')}}"></script>
+    <script src="{{asset('plugins/daterangepicker/daterangepicker.js')}}"></script>
+    // <!-- datepicker -->
+    <script src="{{asset('plugins/datepicker/bootstrap-datepicker.js')}}"></script>
+    // <!-- Bootstrap WYSIHTML5 -->
+    <script src="{{asset('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}"></script>
+    // <!-- Slimscroll -->
     <script src="{{asset('plugins/slimScroll/jquery.slimscroll.min.js')}}"></script>
     <script src="{{asset('plugins/bootstrap-sweetalert/sweetalert.min.js')}}"></script>
-    <!-- FastClick -->
-    {{--<script src="{{asset('plugins/fastclick/fastclick.js')}}"></script>--}}
+    // <!-- FastClick -->
+    <script src="{{asset('plugins/fastclick/fastclick.js')}}"></script>
     @stack('scripts_lib')
-    <!-- AdminLTE App -->
+    // <!-- AdminLTE App -->
     <script src="{{asset('dist/js/adminlte.js')}}"></script>
-    {{--<!-- AdminLTE dashboard demo (This is only for demo purposes) -->--}}
-    {{--<script src="{{asset('plugins/summernote/summernote-bs4.min.js')}}"></script>--}}
-    <!-- AdminLTE for demo purposes -->
+    // <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="{{asset('plugins/summernote/summernote-bs4.min.js')}}"></script>
+    // <!-- AdminLTE for demo purposes -->
     <script src="{{asset('dist/js/demo.js')}}"></script>
 
     <script src="{{asset('js/scripts.js')}}"></script>
